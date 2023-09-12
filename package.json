@@ -4,7 +4,7 @@
   "description": "make project",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "devStart": "node index. js"
   },
   "author": "akash.aditya001@gmail.com",
   "license": "ISC",
