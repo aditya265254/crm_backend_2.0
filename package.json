@@ -4,7 +4,7 @@
   "description": "make project",
   "main": "index.js",
   "scripts": {
-    "devStart": "node index. js"
+    "devStart": "node index.js"
   },
   "author": "akash.aditya001@gmail.com",
   "license": "ISC",
