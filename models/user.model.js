@@ -2,11 +2,11 @@ const  mongoose  = require("mongoose");
 const { USERTYPES, USER_STATUS } = require("../constant");
 
 const userSchema = new mongoose.Schema({
-    name:{
+    name: {
         type: String,
         required: true,
     },
-    userId : {
+    userId: {
         type: String,
         required: true,
         unique: true,
