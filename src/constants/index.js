@@ -15,8 +15,9 @@ const TICKET_STATUS = {
     BLOCKED: "BLOCKED",
     IN_PROGRESS: "IN PROGRESS"
 };
+
 module.exports = {
     USERTYPES,
     USER_STATUS,
     TICKET_STATUS,
-}
+};

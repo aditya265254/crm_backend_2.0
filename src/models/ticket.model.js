@@ -1,29 +1,27 @@
-const mongoose = require('mongoose');
-const { TICKET_STATUS } = require('../constant');
-
+const mongoose = require("mongoose");
+const { TICKET_STATUS } = require("../constants");
 
 const ticketSchema = new mongoose.Schema({
     title: {
         type: String,
-        require: true,
+        required: true,
     },
     ticketPriority: {
         type: Number,
-        require: true,
-        default: 4
+        required: true,
+        default: 4,
     },
     description: {
         type: String,
-        require: true
+        required: true,
     },
     status: {
         type: String,
-        require: true, 
-        default: TICKET_STATUS.OPEN
+        required: true,
+        default: TICKET_STATUS.OPEN,
     },
     reporter: String,
     assignee: String,
-
     createdAt: {
         type: Date,
         immutable: true,
@@ -33,7 +31,8 @@ const ticketSchema = new mongoose.Schema({
         type: Date,
         default: () => Date.now(),
     },
-}) 
+});
 
 const Ticket = mongoose.model("ticket", ticketSchema);
+
 module.exports = Ticket;

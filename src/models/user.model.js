@@ -1,5 +1,5 @@
-const  mongoose  = require("mongoose");
-const { USERTYPES, USER_STATUS } = require("../constant");
+const mongoose = require("mongoose");
+const { USERTYPES, USER_STATUS } = require("../constants");
 
 const userSchema = new mongoose.Schema({
     name: {
@@ -15,9 +15,9 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
-    email:{
-        type: String, 
-        required: true, 
+    email: {
+        type: String,
+        required: true,
         unique: true,
         lowercase: true,
         minlength: 10,
@@ -31,11 +31,11 @@ const userSchema = new mongoose.Schema({
         type: Date,
         default: () => Date.now(),
     },
-    userType: { 
+    userType: {
         type: String,
         required: true,
-        default:  USERTYPES.CUSTOMER,
-    },    
+        default: USERTYPES.CUSTOMER,
+    },
     userStatus: {
         type: String,
         required: true,
@@ -43,12 +43,6 @@ const userSchema = new mongoose.Schema({
     },
 });
 
+const User = mongoose.model("User", userSchema);
 
-
- // how to export the model
- const User = mongoose.model("User", userSchema);
- 
- 
- module.exports = User;
- 
-
+module.exports = User;
